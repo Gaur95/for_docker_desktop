@@ -1,2 +1,2 @@
 @echo off
-md C:\hello
+docker run -itd --name jecrc --privileged=ture dockerashu/system:v1
