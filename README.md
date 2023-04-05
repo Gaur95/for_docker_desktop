@@ -21,7 +21,7 @@ https://learn.microsoft.com/en-us/windows/wsl/install-manual
 
 
 # User managment 
-<img src='user.jpg'>
+<img src='user.png'>
 
 ### loaction of user's details 
 
