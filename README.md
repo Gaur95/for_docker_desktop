@@ -14,5 +14,6 @@ https://learn.microsoft.com/en-us/windows/wsl/install-manual
   
 <img src='perm.jpg'>
 <img src='perm2.jpg'>
+
 # task
 <img src='task2.jpg'>
