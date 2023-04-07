@@ -4,7 +4,7 @@ https://www.docker.com/products/docker-desktop
 
 ## enable wsl 
 https://learn.microsoft.com/en-us/windows/wsl/install-manual
-## or 
+## or  copy below command and run from cmd (run as administrator)
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
