@@ -12,6 +12,7 @@
  +  docker commit <container_name>  <newImg_name>    -----  to create an image from container
  + docker exec -it <container name > <shell_name >  to get intraactive terminal
 # history
+```
 docker run -d alpine ping google.com
  1708  docker ps
  1709  docker exec -it friendly_leavitt bash
@@ -45,3 +46,4 @@ docker run -d alpine ping google.com
  1737  docker tag myfirstimg aakashgaur57/myfirstimg
  1738  docker images 
  1739  docker push aakashgaur57/myfirstimg
+```
