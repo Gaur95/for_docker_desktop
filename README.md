@@ -11,6 +11,20 @@
  + docker rm -f <container name >  --- to remove running container 
  +  docker commit <container_name>  <newImg_name>    -----  to create an image from container
  + docker exec -it <container name > <shell_name >  to get intraactive terminal
+ + docker login ---- login cli in docker hub registry
+ + docker logout --- logout cli in docker hub registry
+ + docker attach <container name >  ---- to attach from main process
+ + docker stats <container name >  ----  to check resources ocupied by container 
+ + docker tag <old_img>  <new_IMGname>  ---- to change image name 
+ + docker push <img_name >  ---- to push img in docker registry
+ + docker inspect <container name > ---- to inspect details of conatiner
+ ## docker run options 
+ + docker run 
+ + --name <name_of_container>  
+ + -p <port_to_access>:<port_of_service> 
+ + -it -----  to get intrative terminal
+ + -d ---- run in background
+ 
 # history
 ```
 docker run -d alpine ping google.com
