@@ -18,6 +18,9 @@
  + docker tag <old_img>  <new_IMGname>  ---- to change image name 
  + docker push <img_name >  ---- to push img in docker registry
  + docker inspect <container name > ---- to inspect details of conatiner
+ + docker logs <container name>  ----- to see logs 
+ + docker build -t <IMGname> <location_of_Dockerfile>  --- to build dockerImg
+ 
  ## docker run options 
  + docker run 
  + --name <name_of_container>  
