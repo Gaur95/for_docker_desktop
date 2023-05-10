@@ -21,8 +21,9 @@
  + docker logs <container name>  ----- to see logs 
  + docker build -t <IMGname> <location_of_Dockerfile>  --- to build dockerImg
  ### if change name of dockerfile
+ ```
  + docker build -t <IMGname> -f <chnage_name_of_dockerfile>  <Path>
- 
+ ```
  ## docker run options 
  + docker run 
  + --name <name_of_container>  
