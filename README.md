@@ -27,6 +27,17 @@
  + -p <port_to_access>:<port_of_service> 
  + -it -----  to get intrative terminal
  + -d ---- run in background
+ ## docker volumes 
+ ```
+docker volume ls --- list of vol
+docker volume inspect <volname>  -- details of vol
+docker volume rm <Volname>   --- remove vol
+docker volume prune --- remove all vol
+dokcer volume create <volname>  -- create a volume
+
+docker run -v volname:<mount _path>
+docker run -v ./:<mount_path>
+```
  
 # history
 ```
