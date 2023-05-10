@@ -1,0 +1,2 @@
+FROM aakashgaur57/apache_ka_code
+COPY ./main.html /var/www/html/index.html
