@@ -20,7 +20,7 @@
  + docker inspect <container name > ---- to inspect details of conatiner
  + docker logs <container name>  ----- to see logs 
  + docker build -t <IMGname> <location_of_Dockerfile>  --- to build dockerImg
- ### if change name of dockerfile
+ #### if change name of dockerfile
  ```
  + docker build -t <IMGname> -f <chnage_name_of_dockerfile>  <Path>
  ```
@@ -37,9 +37,11 @@ docker volume inspect <volname>  -- details of vol
 docker volume rm <Volname>   --- remove vol
 docker volume prune --- remove all vol
 dokcer volume create <volname>  -- create a volume
-
-docker run -v volname:<mount _path>
-docker run -v ./:<mount_path>
+```
+#### attach volume in container
+```
+docker run -v volname:<mount _path> <imgname>
+docker run -v <absolute_path>:<mount_path> <imgname>
 ```
  
 # history
