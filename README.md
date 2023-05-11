@@ -81,7 +81,26 @@ docker run -d alpine ping google.com
  1739  docker push aakashgaur57/myfirstimg
 ```
 ## docker network
+ ### types of networks 
+ + none
+ + host
+ + bridge
+ 
+ ```
+ docker network ls
+ docker network create jecrc
+ docker network inspect jecrc 
+ docker network create jecrc2 --subnet 192.168.1.0/24
+ docker network rm jecrc ---> to remove jecrc network
+ docker network prune   -----> to remove all network apart from default
+ 
+
+ ```
 ```
+docker run -it --name c1 --network jecrc alpine sh
+docker run -it --name c2 --network jecrc alpine sh
+docker run -it --name c3 --network jecrc2 alpine sh
+docker run -it --name c4 --network jecrc2 alpine sh
 akash@sky:~$ docker network connect jecrc c3
 akash@sky:~$ docker exec -it c3 sh
 / # ping c1
