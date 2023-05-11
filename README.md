@@ -5,7 +5,47 @@
  +  docker ps -a ---- to show all container 
  +  docker rmi <img_name /imgage_id> --- to remove container images
  +  docker run <image_name> ----  to run container
- +  docker stop <container_name/container_id>  --- to stop running container
+ +  docker stop <container_name/container_id>  --- to stop runninakash@sky:~$ docker network connect jecrc c3
+akash@sky:~$ docker exec -it c3 sh
+/ # ping c1
+PING c1 (172.20.0.2): 56 data bytes
+64 bytes from 172.20.0.2: seq=0 ttl=64 time=0.360 ms
+64 bytes from 172.20.0.2: seq=1 ttl=64 time=0.204 msakash@sky:~$ docker network connect jecrc c3
+akash@sky:~$ docker exec -it c3 sh
+/ # ping c1
+PING c1 (172.20.0.2): 56 data bytes
+64 bytes from 172.20.0.2: seq=0 ttl=64 time=0.360 ms
+64 bytes from 172.20.0.2: seq=1 ttl=64 time=0.204 ms
+64 bytes from 172.20.0.2: seq=2 ttl=64 time=0.210 ms
+^C
+--- c1 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.204/0.258/0.360 ms
+/ # ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.409 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.230 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.216 ms
+^C
+--- c2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.216/0.285/0.409 ms
+
+64 bytes from 172.20.0.2: seq=2 ttl=64 time=0.210 ms
+^C
+--- c1 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.204/0.258/0.360 ms
+/ # ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.409 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.230 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.216 ms
+^C
+--- c2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.216/0.285/0.409 ms
+g container
  +  docker rm <container name>  ---  to remove container 
  + docker start <container name >  -- to start stop container
  + docker rm -f <container name >  --- to remove running container 
@@ -80,3 +120,35 @@ docker run -d alpine ping google.com
  1738  docker images 
  1739  docker push aakashgaur57/myfirstimg
 ```
+## docker network
+```
+akash@sky:~$ docker network connect jecrc c3
+akash@sky:~$ docker exec -it c3 sh
+/ # ping c1
+PING c1 (172.20.0.2): 56 data bytes
+64 bytes from 172.20.0.2: seq=0 ttl=64 time=0.360 ms
+64 bytes from 172.20.0.2: seq=1 ttl=64 time=0.204 ms
+64 bytes from 172.20.0.2: seq=2 ttl=64 time=0.210 ms
+^C
+--- c1 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.204/0.258/0.360 ms
+/ # ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.409 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.230 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.216 ms
+^C
+--- c2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.216/0.285/0.409 ms
+
+ ```
+ ## docker portainer
+ ```
+ docker volume create portainer_data
+ ```
+ ```
+ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ee:latest
+ ```
+ 
