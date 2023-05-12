@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  web: 
+    image: aakashgaur57/apache_ka_code
+    container_name: akweb
+    ports:
+      - "2233:80"
+    volumes:
+      - ./apache/:/var/www/html/
