@@ -8,8 +8,8 @@ services:
     volumes:
       - ./apache/:/var/www/html/
   myweb:
-    build: ./apache/.
-    image: mynewIMG
+    build: ./apache/
+    image: mynewimg
     container_name: myakweb
     ports:
       - "2244:80"
