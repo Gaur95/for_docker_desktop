@@ -1,0 +1,23 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "myc1",
+        "creationTimestamp": null,
+        "labels": {
+            "run": "myc1"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "myc1",
+                "image": "httpd",
+                "resources": {}
+            }
+        ],
+        "restartPolicy": "Always",
+        "dnsPolicy": "ClusterFirst"
+    },
+    "status": {}
+}
