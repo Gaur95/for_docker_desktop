@@ -46,7 +46,7 @@ akpod   1/1     Running   1 (39m ago)   10h   10.244.120.96   minikube   <none> 
 
 ```
 
-### type of secrets 
+### types of secrets 
 ```
   docker-registry   Create a secret for use with a Docker registry
   generic           Create a secret from a local file, directory, or literal value
