@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myprpod
+spec:
+  imagePullSecrets:
+    - name: my-cred
+  containers:
+  - image: aakashgaur57/myapache_code
+    name: myprpod
+    ports:
+    - containerPort: 80
