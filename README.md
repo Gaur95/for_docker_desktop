@@ -155,10 +155,17 @@ kube-system            storage-provisioner                         1/1     Runni
  1970  kubectl get po -o wide
 ```
 ### for dashboard
+#### run in powershell or terminal
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
 
 ```
+```
+akash@sky:~/Desktop/k8s_code$ kubectl proxy 
+Starting to serve on 127.0.0.1:8001
+
+```
+#### run in web browser
 ```
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 
