@@ -154,3 +154,7 @@ kube-system            storage-provisioner                         1/1     Runni
  1969  kubectl get po
  1970  kubectl get po -o wide
 ```
+### for dashboard
+```
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+```
