@@ -156,5 +156,6 @@ kube-system            storage-provisioner                         1/1     Runni
 ```
 ### for dashboard
 ```
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
 ```
