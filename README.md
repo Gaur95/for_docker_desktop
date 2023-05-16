@@ -156,6 +156,10 @@ kube-system            storage-provisioner                         1/1     Runni
 ```
 ### for dashboard
 ```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+
+```
+```
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 
 ```
