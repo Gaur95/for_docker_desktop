@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mypod99
+spec:
+  replicas: 2
+  selector:
+    color: blue
+  template:
+    metadata:
+      name: mypod99
+      labels:
+        color: blue
+    spec:
+      containers:
+        - name: mypod99
+          image: httpd
+          ports:
+            - containerPort: 80
