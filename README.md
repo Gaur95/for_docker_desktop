@@ -157,7 +157,7 @@ kube-system            storage-provisioner                         1/1     Runni
 ### for dashboard
 #### run in powershell or terminal
 ```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+kubectl apply -f https://raw.githubusercontent.com/Gaur95/for_docker_desktop/kubernetes/dashboard.yml
 
 ```
 ```
