@@ -186,3 +186,60 @@ UxLTQ4MmYtYTEyMS0xZmVmZmY5M2EyMzkifX0sIm5iZiI6MTY4NDM0NzM0MSwic3ViIjoic3lzdGVtOn
 lcnZpY2VhY2NvdW50OmRlZmF1bHQ6ZGVmYXVsdCJ9.hrVEJTRzPPRftt0nVqH5czX6oZMn-q4I
 ```
 + copy token in to dashboard login 
+
+### may18 create raplicationcontroller
+### yaml of replicationcontroller
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mypod99
+spec:
+  replicas: 2
+  selector:
+    color: blue
+  template:
+    metadata:
+      name: mypod99
+      labels:
+        color: blue
+    spec:
+      containers:
+        - name: mypod99
+          image: httpd
+          ports:
+            - containerPort: 80
+ ```
+ ### history
+ ```
+akash@sky:~/Desktop/k8s_code$ kubectl apply -f replica.yml 
+replicationcontroller/mypod99 configured
+akash@sky:~/Desktop/k8s_code$ kubectl get rc
+NAME      DESIRED   CURRENT   READY   AGE
+mypod99   2         2         2       11h
+akash@sky:~/Desktop/k8s_code$ kubectl get po
+NAME                    READY   STATUS    RESTARTS      AGE
+myapp-cdf59d6c4-786hm   1/1     Running   0             34m
+myapp-cdf59d6c4-7qv7x   1/1     Running   0             34m
+myapp-cdf59d6c4-grf4l   1/1     Running   0             34m
+myapp-cdf59d6c4-tcddt   1/1     Running   0             34m
+myapp-cdf59d6c4-tgrgd   1/1     Running   0             34m
+mypod99-l4ksm           1/1     Running   0             79m
+mypod99-r7qt4           1/1     Running   1 (80m ago)   11h
+akash@sky:~/Desktop/k8s_code$ kubectl get po
+NAME            READY   STATUS    RESTARTS      AGE
+mypod99-l4ksm   1/1     Running   0             80m
+mypod99-r7qt4   1/1     Running   1 (80m ago)   11h
+akash@sky:~/Desktop/k8s_code$ kubectl get po --show-labels 
+NAME            READY   STATUS    RESTARTS      AGE   LABELS
+mypod99-l4ksm   1/1     Running   0             80m   color=blue
+mypod99-r7qt4   1/1     Running   1 (81m ago)   11h   color=blue
+akash@sky:~/Desktop/k8s_code$ kubectl delete po mypod99-l4ksm
+pod "mypod99-l4ksm" deleted
+akash@sky:~/Desktop/k8s_code$ kubectl get po --show-labels 
+NAME            READY   STATUS              RESTARTS      AGE   LABELS
+mypod99-jmfwr   0/1     ContainerCreating   0             4s    color=blue
+mypod99-r7qt4   1/1     Running             1 (81m ago)   11h   color=blue
+akash@sky:~/Desktop/k8s_code$ kubectl delete rc mypod99 
+replicationcontroller "mypod99" deleted
+```
