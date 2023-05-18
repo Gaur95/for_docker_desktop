@@ -218,15 +218,6 @@ akash@sky:~/Desktop/k8s_code$ kubectl get rc
 NAME      DESIRED   CURRENT   READY   AGE
 mypod99   2         2         2       11h
 akash@sky:~/Desktop/k8s_code$ kubectl get po
-NAME                    READY   STATUS    RESTARTS      AGE
-myapp-cdf59d6c4-786hm   1/1     Running   0             34m
-myapp-cdf59d6c4-7qv7x   1/1     Running   0             34m
-myapp-cdf59d6c4-grf4l   1/1     Running   0             34m
-myapp-cdf59d6c4-tcddt   1/1     Running   0             34m
-myapp-cdf59d6c4-tgrgd   1/1     Running   0             34m
-mypod99-l4ksm           1/1     Running   0             79m
-mypod99-r7qt4           1/1     Running   1 (80m ago)   11h
-akash@sky:~/Desktop/k8s_code$ kubectl get po
 NAME            READY   STATUS    RESTARTS      AGE
 mypod99-l4ksm   1/1     Running   0             80m
 mypod99-r7qt4   1/1     Running   1 (80m ago)   11h
