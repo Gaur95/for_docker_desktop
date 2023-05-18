@@ -234,3 +234,27 @@ mypod99-r7qt4   1/1     Running             1 (81m ago)   11h   color=blue
 akash@sky:~/Desktop/k8s_code$ kubectl delete rc mypod99 
 replicationcontroller "mypod99" deleted
 ```
+### deploy
+```
+akash@sky:~/Desktop/k8s_code$ kubectl apply -f deploy.yml 
+deployment.apps/jecrcdep unchanged
+akash@sky:~/Desktop/k8s_code$ kubectl get deploy
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+jecrcdep   3/3     3            3           3m15s
+akash@sky:~/Desktop/k8s_code$ kubectl get po
+NAME                       READY   STATUS    RESTARTS   AGE
+jecrcdep-c95bcf94f-s6t9b   1/1     Running   0          3m20s
+jecrcdep-c95bcf94f-w4497   1/1     Running   0          3m20s
+jecrcdep-c95bcf94f-zltgf   1/1     Running   0          3m20s
+akash@sky:~/Desktop/k8s_code$ kubectl get pod --show-labels 
+NAME                       READY   STATUS    RESTARTS   AGE     LABELS
+jecrcdep-c95bcf94f-s6t9b   1/1     Running   0          3m30s   color=red,pod-template-hash=c95bcf94f
+jecrcdep-c95bcf94f-w4497   1/1     Running   0          3m30s   color=red,pod-template-hash=c95bcf94f
+jecrcdep-c95bcf94f-zltgf   1/1     Running   0          3m30s   color=red,pod-template-hash=c95bcf94f
+akash@sky:~/Desktop/k8s_code$ kubectl get po -o wide
+NAME                       READY   STATUS    RESTARTS   AGE     IP               NODE           NOMINATED NODE   READINESS GATES
+jecrcdep-c95bcf94f-s6t9b   1/1     Running   0          3m49s   10.244.205.243   minikube-m02   <none>           <none>
+jecrcdep-c95bcf94f-w4497   1/1     Running   0          3m49s   10.244.205.244   minikube-m02   <none>           <none>
+jecrcdep-c95bcf94f-zltgf   1/1     Running   0          3m49s   10.244.120.106   minikube       <none>           <none>
+akash@sky:~/Desktop/k8s_code$ 
+```
