@@ -327,7 +327,6 @@ akash@sky:~/Desktop/k8s_code$ minikube ip
 
 **CSI Volumes**: Container Storage Interface (CSI) volumes enable the use of external storage systems that adhere to the CSI standard. CSI allows for the integration of various storage solutions into Kubernetes. With CSI volumes, you can use third-party storage systems, such as cloud providers' managed storage services or specialized storage hardware, to provide persistent storage to your pods.
 
-**DownwardAPI**: The DownwardAPI volume allows you to expose certain information about the pod or its containers as files within the pod. You can expose pod and container metadata, environment variables, or resource limits, enabling containers to access information about their own configuration or the pod's environment
 ## Demo of PV and PVC
 ### yaml of pv and pvc 
 ```
