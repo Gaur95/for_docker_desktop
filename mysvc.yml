@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysvc11
+spec:
+  type: NodePort
+  selector:
+    color: red
+  ports:
+  - port: 1144
+    targetPort: 80

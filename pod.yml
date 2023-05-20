@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: xyz
+  labels:
+    color: red
+spec:
+  containers:
+  - name: xyz
+    image: aakashgaur57/akweb
+    ports:
+      - containerPort: 80
