@@ -361,7 +361,9 @@ spec:
   storageClassName: standard
  ```
  <img src='pv_pvcdemo.png'>
+ 
 ### pod with pvc     --- yaml
+
 ```
 apiVersion: v1
 kind: Pod
