@@ -361,3 +361,25 @@ spec:
   storageClassName: standard
  ```
  <img src='pv_pvcdemo.png'>
+### pod with pvc     --- yaml
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: akpod
+  labels:
+    name: kuch
+spec:
+  containers:
+    - name: akc1
+      image: httpd
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - mountPath: /var/www/html/
+          name: my-pvc
+  volumes:
+    - name: my-pvc
+      persistentVolumeClaim:
+        claimName: mypvc
+```
