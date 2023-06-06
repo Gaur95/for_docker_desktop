@@ -1,5 +1,6 @@
 # GIT
-
+<img src='intro.jpg'>
+<img src='into_git.png'>
 
 ### git in short
 #### git clone
@@ -42,3 +43,4 @@ git version
   711  git push 
 ```
 ### USE token instead of Password
+
