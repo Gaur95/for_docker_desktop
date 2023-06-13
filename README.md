@@ -5,5 +5,5 @@ docker run -itd -v v1:/var/jenkins_home -v /run/docker.sock:/run/docker.sock -v 
 
 #jenkins slave
 ```
-docker run -i --rm --name agent3 --init jenkins/agent java -jar /usr/share/jenkins/agent.jar
+docker run -i -v /run/docker.sock:/run/docker.sock -v /usr/bin/docker:/bin/docker  --rm --name agent3  --init jenkins/agent java -jar /usr/share/jenkins/agent.jar
 ```
