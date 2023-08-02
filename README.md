@@ -21,8 +21,8 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 docker --version
 ```
 # Projects 
-## 1
+## P-1
 <img src=project1.png>
 
-## 2
+## P-2
 <img src=project2.png>
